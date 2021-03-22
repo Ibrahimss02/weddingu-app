@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".activities.SplashScreen"
+    android:background="@drawable/loading_bg">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/w_logo_loading"
+            android:layout_width="188dp"
+            android:layout_height="105dp"
+            android:contentDescription="@string/w_logo_loading"
+            android:src="@drawable/w_logo"/>
+
+        <ImageView
+            android:id="@+id/i_logo_loading"
+            android:layout_width="74dp"
+            android:layout_height="116dp"
+            android:contentDescription="@string/i_logo_loading"
+            android:src="@drawable/i_logo"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/app_title_marginTop"
+        android:fontFamily="@font/raleway"
+        android:text="@string/app_name_loading"
+        android:letterSpacing="0.1"
+        android:textColor="@color/white"
+        android:textSize="45sp" />
+
+
+</LinearLayout>

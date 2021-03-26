@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bottom_nav_home"
+        android:title="@string/home"
+        android:icon="@drawable/ic_home_nav"
+        app:itemIconTint="#C4C4C4"/>
+
+    <item
+        android:id="@+id/bottom_nav_search"
+        android:title="@string/search"
+        android:icon="@drawable/ic_search_nav"/>
+
+    <item
+        android:id="@+id/bottom_nav_message"
+        android:title="@string/message"
+        android:icon="@drawable/ic_eva_message_circle_outline"/>
+
+    <item
+        android:id="@+id/bottom_nav_account"
+        android:title="@string/account"
+        android:icon="@drawable/ic_account"/>
+
+</menu>

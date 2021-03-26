@@ -10,18 +10,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WeddingU">
         <activity
+            android:name=".activities.SewaGedungActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".activities.SearchActivity" />
+        <activity
+            android:name=".activities.GetStarted"
+            android:screenOrientation="portrait"
+            android:theme="@style/No_Action_Bar" />
+        <activity
             android:name=".activities.SplashScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/No_Action_Bar">
+            android:theme="@style/No_Action_Bar_No_Anim">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.MainActivity">
-
-        </activity>
+        <activity
+            android:name=".activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/No_Action_Bar" />
 
         <meta-data
             android:name="preloaded_fonts"

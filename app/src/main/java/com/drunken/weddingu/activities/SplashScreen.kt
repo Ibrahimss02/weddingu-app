@@ -27,12 +27,16 @@ class SplashScreen : AppCompatActivity() {
         topAnim = AnimationUtils.loadAnimation(this, R.anim.top_animation)
         bottomAnim = AnimationUtils.loadAnimation(this, R.anim.bottom_animation)
 
-        binding.iLogoLoading.startAnimation(topAnim)
         binding.wLogoLoading.startAnimation(topAnim)
         binding.titleLoading.startAnimation(bottomAnim)
 
-        Timer("Starting", false).schedule(2000){
-            startActivity(Intent(this@SplashScreen, MainActivity::class.java))
+        binding.mainScreen.animate().translationY((-1600F)).setDuration(1000).startDelay = 1500
+        binding.titleLoading.animate().translationX(1400F).setDuration(1000).startDelay = 5500
+        binding.wLogoLoading.animate().translationX(1400F).setDuration(1000).startDelay = 5500
+
+        Timer("Starting", false).schedule(2350){
+            startActivity(Intent(this@SplashScreen, GetStarted::class.java))
+            overridePendingTransition(0,0)
             finish()
         }
     }

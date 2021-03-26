@@ -30,4 +30,9 @@
     <string name="eo_image_desc">EO Image</string>
     <string name="catering_image_desc">Catering Image</string>
     <string name="photographer_image_desc">Photographer Image</string>
+    <string name="search_icon_primary_color_desc">Search Icon Primary Color</string>
+    <string name="cari_gedung"><font size="11">Cari Gedung</font></string>
+    <string name="nama_gedung">Nama Gedung</string>
+    <string name="alamat_gedung">Alamat Gedung</string>
+    <string name="harga_gedung"><b>Rp 15.000.000/</b>night</string>
 </resources>

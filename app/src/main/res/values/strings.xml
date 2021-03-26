@@ -3,4 +3,31 @@
     <string name="app_name_loading">WEDDING-U!</string>
     <string name="w_logo_loading">W Logo Loading</string>
     <string name="i_logo_loading">I Logo Loading</string>
+    <string name="get_started_title">Menikah anti ribet dengan Wedding-U!</string>
+    <string name="get_started_desc">Wedding-U akan membantumu …</string>
+    <string name="get_started_start">Mulai</string>
+    <string name="sewa_gedung">Sewa \nGedung</string>
+    <string name="event_organizer">Event \nOrganizer</string>
+    <string name="katering">Katering</string>
+    <string name="photographer">Photo &amp;\nVideographer</string>
+    <string name="gedung">Gedung</string>
+    <string name="eo_title">Event Organizer</string>
+    <string name="photographer_title">Photo &amp; Videographer</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="message">Message</string>
+    <string name="account">Account</string>
+
+
+    <string name="just_married_image">Just Married Image</string>
+    <string name="logo_image_desc">Logo Image</string>
+    <string name="list_icon_desc">List Icon</string>
+    <string name="gedung_icon_desc">Gedung Icon</string>
+    <string name="eo_icon_desc">EO Icon</string>
+    <string name="catering_icon_desc">Catering Icon</string>
+    <string name="photographer_icon_desc">Photographer Icon</string>
+    <string name="gedung_image_desc">Gedung Image</string>
+    <string name="eo_image_desc">EO Image</string>
+    <string name="catering_image_desc">Catering Image</string>
+    <string name="photographer_image_desc">Photographer Image</string>
 </resources>

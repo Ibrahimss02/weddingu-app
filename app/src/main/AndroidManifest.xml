@@ -10,28 +10,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WeddingU">
         <activity
+            android:name=".activities.ProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/No_Action_Bar">
+        </activity>
+        <activity
             android:name=".activities.LoginActivity.RegisterActivity"
-            android:theme="@style/No_Action_Bar"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/No_Action_Bar">
         </activity>
         <activity
             android:name=".activities.LoginActivity.LoginActivity"
-            android:theme="@style/No_Action_Bar"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/No_Action_Bar">
         </activity>
         <activity
             android:name=".activities.DetailGedung"
-            android:theme="@style/No_Action_Bar"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/No_Action_Bar">
         </activity>
         <activity
             android:name=".activities.SewaGedungActivity"
             android:screenOrientation="portrait"
             android:theme="@style/No_Action_Bar">
-
         </activity>
-        <activity android:name=".activities.SearchActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.SearchActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.GetStarted"
             android:screenOrientation="portrait"

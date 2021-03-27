@@ -29,27 +29,16 @@ class MainActivity : AppCompatActivity() {
             onPause()
         }
 
-        binding.bottomNavMenu.selectedItemId = R.id.bottom_nav_home
 
-        binding.bottomNavMenu.setOnNavigationItemReselectedListener(object : BottomNavigationView.OnNavigationItemReselectedListener{
-            override fun onNavigationItemReselected(item: MenuItem) {
-                when(item.itemId){
-                    R.id.bottom_nav_account -> {
-                        // Implement Intent Here
-                    }
-                    R.id.bottom_nav_message -> {
-                        // Implement Intent Here
-                    }
-                    R.id.bottom_nav_search -> {
-                        // Implement Intent Here
-                    }
-                    R.id.bottom_nav_home -> {
-                        // Implement Intent Here
-                    }
+        binding.bottomNavMenu.setOnNavigationItemSelectedListener {
+            when(it.itemId){
+                R.id.bottom_nav_account -> {
+                    startActivity(Intent(this@MainActivity, ProfileActivity::class.java))
+                    finish()
                 }
             }
-
-        })
+            true
+        }
     }
 
 }

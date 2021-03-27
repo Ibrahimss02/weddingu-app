@@ -35,4 +35,6 @@
     <string name="nama_gedung">Nama Gedung</string>
     <string name="alamat_gedung">Alamat Gedung</string>
     <string name="harga_gedung"><b>Rp 15.000.000/</b>night</string>
+    <string name="luas_gedung">Luas Gedung</string>
+    <string name="kapasitas">Kapasitas</string>
 </resources>

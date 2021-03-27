@@ -37,4 +37,10 @@
     <string name="harga_gedung"><b>Rp 15.000.000/</b>night</string>
     <string name="luas_gedung">Luas Gedung</string>
     <string name="kapasitas">Kapasitas</string>
+    <string name="profile_username">Lisa</string>
+    <string name="profile_email">Lisa@gmail.com</string>
+    <string name="profile_password">••••••••</string>
+    <string name="profile_address">Jl Suprapto No. 13</string>
+    <string name="profile_number">081234567890</string>
+    <string name="profile_change"><b>Change your profile</b></string>
 </resources>

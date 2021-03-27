@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import com.drunken.weddingu.R
+import com.drunken.weddingu.activities.LoginActivity.LoginActivity
 import com.drunken.weddingu.databinding.ActivityGetStartedBinding
 
 class GetStarted : AppCompatActivity() {
@@ -20,7 +21,7 @@ class GetStarted : AppCompatActivity() {
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
         binding.tvGetStartedStart.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
         }

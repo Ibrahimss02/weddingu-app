@@ -100,6 +100,7 @@ class SewaGedungActivity : AppCompatActivity() {
         val dataGedung6 = GedungModel(6, "Gedung Selamat", "Jalan Selamat No. 1 Malang, Jawa Timur", listImage6, 1700, 3000, 4.5, 26356000, "04231111")
         val dataGedung7 = GedungModel(7, "Gedung John", "Jalan Cena No. 9 Malang, Jawa Timur", listImage7, 1500, 2700, 4.3, 20025000, "0423568")
         val dataGedung8 = GedungModel(8, "Gedung London", "Jalan Inggris No. 77 Malang, Jawa Timur", listImage8, 2000, 3250, 4.5, 28956000, "0423568")
+
         val gedungModel = arrayListOf(dataGedung1, dataGedung2, dataGedung3, dataGedung4, dataGedung5, dataGedung6, dataGedung7, dataGedung8)
 
 

@@ -4,9 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
-import com.drunken.weddingu.R
-import com.drunken.weddingu.activities.LoginActivity.LoginActivity
 import com.drunken.weddingu.databinding.ActivityGetStartedBinding
+import com.drunken.weddingu.firebase.Firestore
+import com.google.firebase.ktx.Firebase
 
 class GetStarted : AppCompatActivity() {
 

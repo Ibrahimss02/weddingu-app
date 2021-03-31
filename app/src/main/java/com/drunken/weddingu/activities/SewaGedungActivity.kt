@@ -1,5 +1,6 @@
 package com.drunken.weddingu.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -46,6 +47,16 @@ class SewaGedungActivity : AppCompatActivity() {
         var jmlhGedung = "%,d".format(myAdapters.itemCount)
         val jmlhGedungText = "$jmlhGedung Gedung in Malang, Jawa Timur"
         binding.tvJmlhGedung.text = jmlhGedungText
+
+        myAdapters.setOnClickListener(object : SewaGedungAdapters.OnClickListener{
+            override fun onClick(position: Int, model: GedungModel) {
+                val intent = Intent(this@SewaGedungActivity, DetailGedung::class.java)
+                intent.putExtra("Gedung Model", model)
+                startActivity(intent)
+
+            }
+        })
+
 
         binding.etSearch.addTextChangedListener(object : TextWatcher{
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {

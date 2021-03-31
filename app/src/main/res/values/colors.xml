@@ -10,4 +10,6 @@
     <color name="pink">#9F203C</color>
     <color name="primary_dark">#9A0635</color>
     <color name="primary_accent">#A23844</color>
+    <color name="grey">#998386</color>
+    <color name="snackbar_error_color">#F72400</color>
 </resources>

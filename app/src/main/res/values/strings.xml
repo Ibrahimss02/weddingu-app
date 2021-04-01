@@ -43,4 +43,14 @@
     <string name="profile_address">Jl Suprapto No. 13</string>
     <string name="profile_number">081234567890</string>
     <string name="profile_change"><b>Change your profile</b></string>
+    <string name="contact">Contact</string>
+    <string name="masukkan_keranjang">Masukkan Keranjang</string>
+    <string name="pilih_tanggal">Pilih tanggal</string>
+    <string name="sign_out">SIGN OUT</string>
+    <string name="username">Username</string>
+    <string name="profile_account">Profile Account</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="address">Address</string>
+    <string name="handphone_number">Handphone Number</string>
 </resources>

@@ -1,5 +1,7 @@
 package com.drunken.weddingu.models
 
+import java.io.Serializable
+
 data class GedungModel(
     val id : Int,
     val name : String,
@@ -11,6 +13,6 @@ data class GedungModel(
     val rating : Double,
     val harga : Int,
     val kontak : String,
-)
+) : Serializable
 
 

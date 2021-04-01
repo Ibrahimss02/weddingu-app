@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.ProfileActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -53,14 +54,14 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_nav_menu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/bottom_nav_menu" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
 
     <FrameLayout
         android:id="@+id/frameLayout"
@@ -73,9 +74,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ll_home_page">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image_account"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="50dp"
             android:src="@drawable/ikon_profile" />
@@ -96,7 +98,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Profile Account"
+        android:text="@string/profile_account"
         android:textSize="18sp"
         android:textColor="@color/white"
         android:layout_marginTop="40dp"
@@ -109,7 +111,7 @@
         android:id="@+id/username_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="username"
+        android:text="@string/username"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintVertical_bias="0"
         android:layout_marginStart="120dp"
@@ -153,7 +155,7 @@
         android:id="@+id/email_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email"
+        android:text="@string/email"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintVertical_bias="0"
         android:layout_marginStart="120dp"
@@ -197,7 +199,7 @@
         android:id="@+id/password_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Password"
+        android:text="@string/password"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintVertical_bias="0"
         android:layout_marginStart="120dp"
@@ -241,7 +243,7 @@
         android:id="@+id/address_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Address"
+        android:text="@string/address"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintVertical_bias="0"
         android:layout_marginStart="120dp"
@@ -285,7 +287,7 @@
         android:id="@+id/number_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Handphone Number"
+        android:text="@string/handphone_number"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintVertical_bias="0"
         android:layout_marginStart="120dp"
@@ -339,6 +341,7 @@
         app:layout_constraintTop_toBottomOf="@+id/line5"/>
 
     <ImageView
+        android:id="@+id/gear_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_baseline_settings_24"
@@ -350,5 +353,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/line5"/>
+
+    <TextView
+        android:id="@+id/sign_out_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/gear_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/sign_out"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/poppins"
+        android:textStyle="bold"
+        android:layout_marginStart="260dp"
+        android:textColor="@color/primary_dark"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

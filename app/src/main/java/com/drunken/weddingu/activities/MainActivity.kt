@@ -3,11 +3,12 @@ package com.drunken.weddingu.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
+import com.bumptech.glide.Glide
 import com.drunken.weddingu.R
+import com.drunken.weddingu.adapters.ViewPagerAdapter
 import com.drunken.weddingu.databinding.ActivityMainBinding
-import com.google.android.material.bottomnavigation.BottomNavigationMenu
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.drunken.weddingu.firebase.Firestore
+import com.drunken.weddingu.models.User
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,6 +18,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+        Firestore().signInUser(this)
 
         binding.ivGedung.setOnClickListener {
             val intent = Intent(this, SewaGedungActivity::class.java)
@@ -29,27 +33,30 @@ class MainActivity : AppCompatActivity() {
             onPause()
         }
 
-        binding.bottomNavMenu.selectedItemId = R.id.bottom_nav_home
-
-        binding.bottomNavMenu.setOnNavigationItemReselectedListener(object : BottomNavigationView.OnNavigationItemReselectedListener{
-            override fun onNavigationItemReselected(item: MenuItem) {
-                when(item.itemId){
-                    R.id.bottom_nav_account -> {
-                        // Implement Intent Here
-                    }
-                    R.id.bottom_nav_message -> {
-                        // Implement Intent Here
-                    }
-                    R.id.bottom_nav_search -> {
-                        // Implement Intent Here
-                    }
-                    R.id.bottom_nav_home -> {
-                        // Implement Intent Here
-                    }
+        binding.bottomNavMenu.setOnNavigationItemSelectedListener {
+            when(it.itemId){
+                R.id.bottom_nav_account -> {
+                    startActivity(Intent(this@MainActivity, ProfileActivity::class.java))
+                    finish()
                 }
             }
+            true
+        }
 
-        })
+        binding.ivProfileImageHomepage.setOnClickListener {
+            startActivity(Intent(this, ProfileActivity::class.java))
+            finish()
+        }
+
+        val listImage1 = arrayListOf(R.drawable.wedding_venue_example, R.drawable.wedding_venue_example1, R.drawable.wedding_venue_example2)
+        val adapter = ViewPagerAdapter(this, listImage1)
+        binding.viewPagerHomepageBanner.adapter = adapter
+        binding.bannerIndicatorHomepage.setViewPager(binding.viewPagerHomepageBanner)
+
+    }
+
+    fun updateImage(user : User){
+        Glide.with(this).load(user.imageProfile).centerCrop().placeholder(R.drawable.profile_image_sample).into(binding.ivProfileImageHomepage)
     }
 
 }

@@ -8,6 +8,7 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import com.drunken.weddingu.R
 import com.drunken.weddingu.databinding.ActivitySplashScreenBinding
+import com.drunken.weddingu.firebase.Firestore
 import java.util.*
 import kotlin.concurrent.schedule
 
@@ -35,7 +36,13 @@ class SplashScreen : AppCompatActivity() {
         binding.wLogoLoading.animate().translationX(1400F).setDuration(1000).startDelay = 5500
 
         Timer("Starting", false).schedule(2350){
-            startActivity(Intent(this@SplashScreen, GetStarted::class.java))
+            val currentUserID = Firestore().getCurrentUserID()
+
+            if (currentUserID != null){
+                startActivity(Intent(this@SplashScreen, MainActivity::class.java))
+            } else {
+                startActivity(Intent(this@SplashScreen, GetStarted::class.java))
+            }
             overridePendingTransition(0,0)
             finish()
         }

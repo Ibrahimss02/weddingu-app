@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "794552530480",
+    "project_id": "weddingu-5f88a",
+    "storage_bucket": "weddingu-5f88a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794552530480:android:99836ae984272f2f901ff5",
+        "android_client_info": {
+          "package_name": "com.drunken.weddingu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "794552530480-hdfr00q34232q0a8p8c4g3bufv8ja0eu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBF9dUe2ZretcMUz0KgOivK2R0lqKC4AXI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "794552530480-hdfr00q34232q0a8p8c4g3bufv8ja0eu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

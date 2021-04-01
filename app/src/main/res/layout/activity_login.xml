@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.LoginActivity.LoginActivity"
+    tools:context=".activities.LoginActivity"
     android:background="@color/white">
 
     <ImageView
@@ -47,6 +47,7 @@
         android:textColor="@color/pink"
         android:textSize="12sp"
         android:textStyle="normal"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageWedding"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/relativeLayout" />
@@ -58,6 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="78dp"
         android:layout_marginEnd="80dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintWidth_percent=".6"
         app:layout_constraintBottom_toBottomOf="@+id/imageWedding"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,6 +79,7 @@
             android:text="LOGIN"
             android:textColor="@color/white"
             android:textSize="12sp"
+            android:fontFamily="@font/poppins"
             android:layout_marginTop="8dp"
             android:layout_marginStart="45dp"/>
 
@@ -90,10 +93,12 @@
         android:text="@string/app_name_loading"
         android:textColor="@color/white"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageWedding"
+        android:fontFamily="@font/poppins"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/relativeLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageWedding" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/email"
@@ -102,12 +107,13 @@
         app:layout_constraintWidth_percent=".7"
         app:layout_constraintVertical_bias=".35"
         app:layout_constraintHorizontal_bias=".5"
-        android:hint="Enter email or username"
+        android:hint="Enter email"
         android:inputType="textEmailAddress"
         android:textSize="14sp"
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
+        android:fontFamily="@font/poppins"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -123,6 +129,7 @@
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
+        android:fontFamily="@font/poppins"
         app:layout_constraintWidth_percent=".7"
         app:layout_constraintVertical_bias="0"
         android:layout_marginTop="20dp"
@@ -141,6 +148,7 @@
         android:text="Login"
         android:textSize="16sp"
         android:textStyle="normal"
+        android:fontFamily="@font/poppins"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -156,6 +164,7 @@
         app:layout_constraintHorizontal_bias="1"
         android:layout_marginTop="5dp"
         android:layout_marginRight="5dp"
+        android:fontFamily="@font/poppins"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/password"
         app:layout_constraintStart_toStartOf="parent"
@@ -168,6 +177,7 @@
         android:layout_marginBottom="280dp"
         android:text="OR"
         android:textSize="20sp"
+        android:fontFamily="@font/poppins"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -217,7 +227,7 @@
 
     <TextView
         android:id="@+id/register_tv"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Don't have an account? Register"
         android:textSize="10sp"
@@ -227,6 +237,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/poppins"
         app:layout_constraintTop_toBottomOf="@+id/imageGoogle"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

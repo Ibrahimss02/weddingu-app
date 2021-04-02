@@ -53,4 +53,17 @@
     <string name="password">Password</string>
     <string name="address">Address</string>
     <string name="handphone_number">Handphone Number</string>
+    <string name="list_pemesanan">List Pemesanan</string>
+    <string name="harga_gedung_tanpa_rinci">Rp 0</string>
+    <string name="nama_katering">Nama Katering</string>
+    <string name="nama_eo">Nama EO</string>
+    <string name="nama_photo">Nama Photo</string>
+    <string name="total_items">Total 0 item</string>
+    <string name="checkout">Checkout</string>
+    <string name="listnya_masih_kosong">Listnya masih kosong. Pesan yuk!</string>
+    <string name="metode_pembayaran">Metode Pembayaran</string>
+    <string name="transfer_bank">Transfer Bank</string>
+    <string name="total_pembayaran">Total Pembayaran</string>
+    <string name="bayar">Bayar</string>
+    <string name="customer_service">Customer Service</string>
 </resources>

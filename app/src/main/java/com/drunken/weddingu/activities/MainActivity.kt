@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        Firestore().signInUser(this)
+        Firestore().getUserData(this)
 
         binding.ivGedung.setOnClickListener {
             val intent = Intent(this, SewaGedungActivity::class.java)
@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.bottom_nav_account -> {
                     startActivity(Intent(this@MainActivity, ProfileActivity::class.java))
                     finish()
+                    overridePendingTransition(0, 0)
                 }
             }
             true
@@ -45,10 +46,15 @@ class MainActivity : AppCompatActivity() {
 
         binding.ivProfileImageHomepage.setOnClickListener {
             startActivity(Intent(this, ProfileActivity::class.java))
-            finish()
+            onPause()
         }
 
-        val listImage1 = arrayListOf(R.drawable.wedding_venue_example, R.drawable.wedding_venue_example1, R.drawable.wedding_venue_example2)
+        binding.listIconHomepage.setOnClickListener {
+            startActivity(Intent(this, KeranjangActivity::class.java))
+            onPause()
+        }
+
+        val listImage1 = arrayListOf(R.drawable.wedding_venue_example, R.drawable.ic_customer_service, R.drawable.wedding_photographer)
         val adapter = ViewPagerAdapter(this, listImage1)
         binding.viewPagerHomepageBanner.adapter = adapter
         binding.bannerIndicatorHomepage.setViewPager(binding.viewPagerHomepageBanner)
@@ -56,7 +62,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun updateImage(user : User){
-        Glide.with(this).load(user.imageProfile).centerCrop().placeholder(R.drawable.profile_image_sample).into(binding.ivProfileImageHomepage)
+        Glide.with(this).load(user.imageProfile).centerCrop().placeholder(R.drawable.ic_account_circle_putih).into(binding.ivProfileImageHomepage)
     }
 
 }

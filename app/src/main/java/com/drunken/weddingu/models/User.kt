@@ -10,7 +10,7 @@ data class User(
     val imageProfile : String = "",
     val address : String = "",
     val handphoneNumber : String = "",
-    val fcmToken : String = "",
+    val gedungModel: Int = 0,
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString()!!,
@@ -19,7 +19,7 @@ data class User(
         parcel.readString()!!,
         parcel.readString()!!,
         parcel.readString()!!,
-        parcel.readString()!!
+        parcel.readInt(),
     ) {
     }
 
@@ -30,7 +30,7 @@ data class User(
         parcel.writeString(imageProfile)
         parcel.writeString(address)
         parcel.writeString(handphoneNumber)
-        parcel.writeString(fcmToken)
+        parcel.writeInt(gedungModel)
     }
 
     override fun describeContents(): Int {

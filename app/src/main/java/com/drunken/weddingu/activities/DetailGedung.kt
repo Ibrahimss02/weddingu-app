@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.drunken.weddingu.adapters.ViewPagerAdapter
 import com.drunken.weddingu.databinding.ActivityDetailGedungBinding
+import com.drunken.weddingu.firebase.Firestore
 import com.drunken.weddingu.models.GedungModel
 import java.util.jar.Manifest
 
@@ -50,6 +51,15 @@ class DetailGedung : AppCompatActivity() {
         binding.contactBtn.setOnClickListener {
             val dial = "tel:${gedungDetailModel!!.kontak}"
             startActivity(Intent(Intent.ACTION_DIAL, Uri.parse(dial)))
+        }
+
+        binding.listIconDetailGedung.setOnClickListener {
+            startActivity(Intent(this, KeranjangActivity::class.java))
+            onPause()
+        }
+
+        binding.addToCartBtn.setOnClickListener {
+            Firestore().addToCartGedung(this, gedungDetailModel!!)
         }
     }
 }

@@ -1,14 +1,9 @@
 package com.drunken.weddingu.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
-import android.util.Log
-import android.widget.Toast
 import com.drunken.weddingu.R
-import com.drunken.weddingu.activities.BaseActivity
-import com.drunken.weddingu.activities.MainActivity
 import com.drunken.weddingu.databinding.ActivityLoginBinding
 import com.drunken.weddingu.firebase.Firestore
 import com.drunken.weddingu.models.User
@@ -58,7 +53,7 @@ class LoginActivity : BaseActivity() {
             showProgressDialog("Please wait")
             auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    Firestore().signInUser(this)
+                    Firestore().getUserData(this)
                 } else {
                     showErrorSnackBar("Authentication Error")
                 }

@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.drunken.weddingu.R
 import com.drunken.weddingu.adapters.SewaGedungAdapters
 import com.drunken.weddingu.databinding.ActivitySewaGedungBinding
+import com.drunken.weddingu.firebase.Firestore
 import com.drunken.weddingu.models.GedungModel
 import java.util.*
 import java.util.Locale.filter
@@ -34,6 +35,10 @@ class SewaGedungActivity : AppCompatActivity() {
 
         binding.btnBack.setOnClickListener {
             onBackPressed()
+        }
+        binding.btnList.setOnClickListener {
+            startActivity(Intent(this, KeranjangActivity::class.java))
+            onPause()
         }
     }
 
@@ -112,7 +117,10 @@ class SewaGedungActivity : AppCompatActivity() {
         val dataGedung7 = GedungModel(7, "Gedung John", "Jalan Cena No. 9 Malang, Jawa Timur", listImage7, 1500, 2700, 4.3, 20025000, "0423568")
         val dataGedung8 = GedungModel(8, "Gedung London", "Jalan Inggris No. 77 Malang, Jawa Timur", listImage8, 2000, 3250, 4.5, 28956000, "0423568")
 
+
         val gedungModel = arrayListOf(dataGedung1, dataGedung2, dataGedung3, dataGedung4, dataGedung5, dataGedung6, dataGedung7, dataGedung8)
+
+        Firestore().putGedungModel(this, gedungModel)
 
 
         return gedungModel

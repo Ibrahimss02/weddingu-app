@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.KeranjangActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_home_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="20dp"
+        android:background="@drawable/home_page_bg_gradient">
+
+        <ImageView
+            android:id="@+id/home_page_logo"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:contentDescription="@string/logo_image_desc"
+            android:elevation="20dp"
+            android:src="@drawable/w_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/sv_keranjang_bg"
+        app:layout_constraintBottom_toTopOf="@+id/bar_pilih_metode_pembayaran"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ll_home_page"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkout"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:id="@+id/btn_checkout_back"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_baseline_arrow_back_ios_28_black"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="25dp"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#A7A7A7" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="#2D8E8D8D"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingStart="22dp"
+            android:paddingEnd="22dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_perm_identity_24px_outlined"/>
+
+                <TextView
+                    android:id="@+id/tv_checkout_nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A/n Lisa"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginStart="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_phone_24px_outlined"/>
+
+                <TextView
+                    android:id="@+id/tv_checkout_nomor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="081234567890"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginStart="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_calendar"/>
+
+                <TextView
+                    android:id="@+id/tv_checkout_tanggal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tanggal 25 maret 2021"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginStart="10dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_checkout_item_pertama"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="#2D8E8D8D"
+                    app:cardElevation="0dp"
+                    tools:visibility="gone"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/ll_cart_pertama"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:elevation="4dp"
+                                app:cardCornerRadius="10dp">
+
+                                <ImageView
+                                    android:id="@+id/checkout_gedung_iv"
+                                    android:layout_width="103dp"
+                                    android:layout_height="107dp"
+                                    android:contentDescription="@string/gedung_image_desc"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/wedding_venue_example" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="-28dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/checkout_nama_gedung_tv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="@string/nama_gedung"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/checkout_gedung_tarif"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins"
+                                    android:text="@string/harga_gedung_tanpa_rinci"
+                                    android:textColor="@color/primary_dark"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_checkout_item_kedua"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="#2D8E8D8D"
+                    app:cardElevation="0dp"
+                    android:layout_marginTop="2dp"
+                    tools:visibility="gone"
+                    android:visibility="gone"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:elevation="4dp"
+                                app:cardCornerRadius="10dp">
+
+                                <ImageView
+                                    android:id="@+id/checkout_gambar_katering"
+                                    android:layout_width="103dp"
+                                    android:layout_height="107dp"
+                                    android:contentDescription="@string/gedung_image_desc"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/wedding_venue_example" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="-28dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/checkout_nama_katering"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="@string/nama_katering"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/checkout_tarif_katering"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins"
+                                    android:text="@string/harga_gedung_tanpa_rinci"
+                                    android:textColor="@color/primary_dark"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_checkout_item_ketiga"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="#2D8E8D8D"
+                    app:cardElevation="0dp"
+                    android:layout_marginTop="2dp"
+                    tools:visibility="gone"
+                    android:visibility="gone"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:elevation="4dp"
+                                app:cardCornerRadius="10dp">
+
+                                <ImageView
+                                    android:id="@+id/checkout_gambar_eo"
+                                    android:layout_width="103dp"
+                                    android:layout_height="107dp"
+                                    android:contentDescription="@string/gedung_image_desc"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/wedding_venue_example" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="-28dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/checkout_nama_eo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="@string/nama_eo"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/checkout_tarif_eo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins"
+                                    android:text="@string/harga_gedung_tanpa_rinci"
+                                    android:textColor="@color/primary_dark"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_checkout_item_keempat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="#2D8E8D8D"
+                    app:cardElevation="0dp"
+                    android:layout_marginTop="2dp"
+                    tools:visibility="gone"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:elevation="4dp"
+                                app:cardCornerRadius="10dp">
+
+                                <ImageView
+                                    android:id="@+id/checkout_gambar_photo"
+                                    android:layout_width="103dp"
+                                    android:layout_height="107dp"
+                                    android:contentDescription="@string/gedung_image_desc"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/wedding_venue_example" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="-28dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/checkout_nama_photo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="@string/nama_photo"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/checkout_tarif_photo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins"
+                                    android:text="@string/harga_gedung_tanpa_rinci"
+                                    android:textColor="@color/primary_dark"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bar_pilih_metode_pembayaran"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toTopOf="@id/nama_pembayaran">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="#2D8E8D8D">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_monetization_on_24px_outlined"
+                android:layout_marginStart="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/metode_pembayaran"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginStart="-23dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/transfer_bank"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                android:layout_marginEnd="8dp"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nama_pembayaran"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toTopOf="@id/garis_atas_price_bar"
+        tools:visibility="gone"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="#8B8E8D8D">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/metode_pembayaran"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginStart="22dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/transfer_bank"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginEnd="22dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/garis_atas_price_bar"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#A7A7A7"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_pembayaran"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_checkout_total_harga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/harga_gedung_tanpa_rinci"
+                android:textColor="@color/primary_dark"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bayar"
+            android:layout_marginStart="110dp"
+            android:layout_marginEnd="110dp"
+            android:layout_marginTop="7dp"
+            app:cornerRadius="10dp"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

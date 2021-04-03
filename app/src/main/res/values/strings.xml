@@ -66,4 +66,6 @@
     <string name="total_pembayaran">Total Pembayaran</string>
     <string name="bayar">Bayar</string>
     <string name="customer_service">Customer Service</string>
+    <string name="search_catering">Cari Katering</string>
+
 </resources>

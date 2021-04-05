@@ -43,8 +43,8 @@
     <string name="profile_address">Jl Suprapto No. 13</string>
     <string name="profile_number">081234567890</string>
     <string name="profile_change"><b>Change your profile</b></string>
-    <string name="contact">Contact</string>
-    <string name="masukkan_keranjang">Masukkan Keranjang</string>
+    <string name="contact">Kontak</string>
+    <string name="masukkan_keranjang">Tambahkan Pesanan</string>
     <string name="pilih_tanggal">Pilih tanggal</string>
     <string name="sign_out">SIGN OUT</string>
     <string name="username">Username</string>
@@ -67,5 +67,7 @@
     <string name="bayar">Bayar</string>
     <string name="customer_service">Customer Service</string>
     <string name="search_catering">Cari Katering</string>
+    <string name="alamat_katering">Alamat Katering</string>
+    <string name="gambar_catering">Gambar Catering</string>
 
 </resources>

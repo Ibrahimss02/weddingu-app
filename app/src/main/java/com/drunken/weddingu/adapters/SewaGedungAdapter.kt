@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.drunken.weddingu.databinding.SewaGedungItemBinding
 import com.drunken.weddingu.models.GedungModel
 
-open class SewaGedungAdapters (private val context : Context, private var list : ArrayList<GedungModel>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+open class SewaGedungAdapter (private val context : Context, private var list : ArrayList<GedungModel>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
 
     private var onClickListener : OnClickListener? = null

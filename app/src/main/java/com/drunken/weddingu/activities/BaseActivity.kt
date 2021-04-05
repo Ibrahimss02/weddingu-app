@@ -34,10 +34,6 @@ open class BaseActivity : AppCompatActivity() {
         progressDialog.dismiss()
     }
 
-    fun getCurrentUserID() : String {
-        return FirebaseAuth.getInstance().currentUser!!.uid
-    }
-
     fun doubleBackToExit(){
         if (doubleBackToExit){
             onBackPressed()

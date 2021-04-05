@@ -1,5 +1,7 @@
 package com.drunken.weddingu.models
 
+import java.io.Serializable
+
 data class CateringModel(
         val id: Int,
         val name: String,
@@ -7,7 +9,7 @@ data class CateringModel(
         val image: ArrayList<Int>,
         val paketMenu: Int,
         val detailPaket: List<String>,
-        val harga: Double,
+        val harga: Int,
         val rating: Double,
         val kontak: String,
-)
+) : Serializable

@@ -29,8 +29,8 @@ class LoginActivity : BaseActivity() {
         }
 
         binding.registerTv.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
+            startActivity(Intent(this, RegisterActivity::class.java))
+            overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left)
         }
 
         binding.buttonLogin.setOnClickListener {

@@ -1,5 +1,6 @@
 package com.drunken.weddingu.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import com.drunken.weddingu.databinding.ActivityCheckoutBinding
@@ -24,7 +25,10 @@ class CheckoutActivity : BaseActivity() {
         binding.btnCheckoutBack.setOnClickListener {
             onBackPressed()
         }
-
+        binding.barPilihMetodePembayaran.setOnClickListener {
+            startActivity(Intent(this, MetodePembayaranActivity::class.java))
+            onPause()
+        }
     }
 
     fun setUserData(user : User){
@@ -43,7 +47,7 @@ class CheckoutActivity : BaseActivity() {
     fun setUserInfoOnUI(user : User){
         binding.tvCheckoutNama.text = "A/n ${user.username}"
         binding.tvCheckoutNomor.text = user.handphoneNumber
-        binding.tvCheckoutTanggal.text = "Tanggal 25/01/2021"
+        binding.tvCheckoutTanggal.text = "Tanggal ${user.tanggal}"
     }
 
     fun setGedungModelToList(gedungModel: GedungModel){

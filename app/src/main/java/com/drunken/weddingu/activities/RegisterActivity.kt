@@ -43,7 +43,7 @@ class RegisterActivity : BaseActivity() {
     private fun registerUser(){
         val email : String = binding.enterEmail.text.toString().trim{ it <= ' '}
         val username : String = binding.username.text.toString().trim { it <= ' ' }
-        val password : String = binding.password2.text.toString().trim{ it <= ' '}
+        val password : String = binding.password2.text.toString()
         val handphoneNumber : String = binding.numberPhone.text.toString()
         val address : String = binding.address.text.toString()
 
@@ -52,7 +52,6 @@ class RegisterActivity : BaseActivity() {
             FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password).addOnCompleteListener {
                 if (it.isSuccessful){
                     val firebaseUser : FirebaseUser = it.result!!.user!!
-                    val registeredEmail = firebaseUser.email!!
                     val user = User(firebaseUser.uid, username, email, handphoneNumber = handphoneNumber, address = address)
                     Firestore().registerUser(this, user)
                 } else {

@@ -11,6 +11,7 @@ data class User(
     val address : String = "",
     val handphoneNumber : String = "",
     val gedungModel: Int = 0,
+    val tanggal : String = "",
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString()!!,

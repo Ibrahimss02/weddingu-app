@@ -10,10 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WeddingU">
         <activity
+            android:name=".activities.MetodePembayaranActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/No_Action_Bar">
+        </activity>
+        <activity
+            android:name=".activities.DetailCatering"
+            android:screenOrientation="portrait"
+            android:theme="@style/No_Action_Bar">
+        </activity>
+        <activity
+            android:name=".activities.CateringActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/No_Action_Bar">
+        </activity>
+        <activity
             android:name=".activities.CheckoutActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/No_Action_Bar"
-            >
+            android:theme="@style/No_Action_Bar">
         </activity>
         <activity
             android:name=".activities.KeranjangActivity"
@@ -43,7 +57,8 @@
             android:theme="@style/No_Action_Bar" />
         <activity
             android:name=".activities.SearchActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/No_Action_Bar" />
         <activity
             android:name=".activities.GetStarted"
             android:screenOrientation="portrait"

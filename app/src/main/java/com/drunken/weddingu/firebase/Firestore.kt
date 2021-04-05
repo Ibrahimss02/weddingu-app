@@ -78,6 +78,10 @@ class Firestore {
         }
     }
 
+    fun setTanggal(date : String){
+        firestore.collection("Users").document(getCurrentUserID()).update("tanggal", date)
+    }
+
     fun getCurrentUserID() : String {
         var currentUser = FirebaseAuth.getInstance().currentUser
         var currentUserID = ""

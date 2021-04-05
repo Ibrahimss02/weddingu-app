@@ -5,15 +5,18 @@ import android.content.pm.PackageManager
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.CalendarView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.drunken.weddingu.adapters.ViewPagerAdapter
 import com.drunken.weddingu.databinding.ActivityDetailGedungBinding
 import com.drunken.weddingu.firebase.Firestore
 import com.drunken.weddingu.models.GedungModel
+import java.text.SimpleDateFormat
+import java.util.*
 import java.util.jar.Manifest
 
-class DetailGedung : AppCompatActivity() {
+class DetailGedung : BaseActivity() {
 
     private lateinit var binding : ActivityDetailGedungBinding
 
@@ -21,7 +24,6 @@ class DetailGedung : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailGedungBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
 
         var gedungDetailModel : GedungModel? = null
 
@@ -60,6 +62,12 @@ class DetailGedung : AppCompatActivity() {
 
         binding.addToCartBtn.setOnClickListener {
             Firestore().addToCartGedung(this, gedungDetailModel!!)
+        }
+
+
+        binding.calendarDetailGedung.setOnDateChangeListener { _, year, month, dayOfMonth ->
+            val date = "$dayOfMonth/${month + 1}/$year"
+            Firestore().setTanggal(date)
         }
     }
 }

@@ -24,20 +24,20 @@ class DetailCatering : AppCompatActivity() {
             cateringDetailModel = intent.getSerializableExtra("Catering Model") as CateringModel
         }
 
-        if (cateringDetailModel != null){
-            val viewPagerAdapter = ViewPagerAdapter(this, cateringDetailModel.image)
-            binding.detailCateringViewPager.adapter = viewPagerAdapter
-            binding.bannerIndicatorDetailCatering.setViewPager(binding.detailCateringViewPager)
-            binding.namaCateringDetail.text = cateringDetailModel.name
-            binding.alamatCateringDetail.text = cateringDetailModel.alamat
-            binding.ratingCateringDetail.text = cateringDetailModel.rating.toString()
-            val luasGedung = "%,d".format(cateringDetailModel.luas)
-            binding.luasGedungDetail.text = "$luasGedung m"
-            val kapasitasGedung = "%,d".format(cateringDetailModel.kapasitas)
-            binding.kapasitasGedungDetail.text = kapasitasGedung
-            val hargaCatering = "%,d".format(cateringDetailModel.harga)
-            binding.tarifGedungDetail.text = "Rp $hargaCatering/paket"
-        }
+//        if (cateringDetailModel != null){
+//            val viewPagerAdapter = ViewPagerAdapter(this, cateringDetailModel.image)
+//            binding.detailCateringViewPager.adapter = viewPagerAdapter
+//            binding.bannerIndicatorDetailCatering.setViewPager(binding.detailCateringViewPager)
+//            binding.namaCateringDetail.text = cateringDetailModel.name
+//            binding.alamatCateringDetail.text = cateringDetailModel.alamat
+//            binding.ratingCateringDetail.text = cateringDetailModel.rating.toString()
+//            val luasGedung = "%,d".format(cateringDetailModel.luas)
+//            binding.luasGedungDetail.text = "$luasGedung m"
+//            val kapasitasGedung = "%,d".format(cateringDetailModel.kapasitas)
+//            binding.kapasitasGedungDetail.text = kapasitasGedung
+//            val hargaCatering = "%,d".format(cateringDetailModel.harga)
+//            binding.tarifGedungDetail.text = "Rp $hargaCatering/paket"
+//        }
 
         binding.exitBtn.setOnClickListener {
             onBackPressed()

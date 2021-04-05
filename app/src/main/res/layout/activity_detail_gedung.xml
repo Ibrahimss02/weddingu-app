@@ -209,6 +209,7 @@
 
 
             <CalendarView
+                android:id="@+id/calendar_detail_gedung"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center" />
@@ -230,6 +231,8 @@
 
         </LinearLayout>
     </ScrollView>
+
+
     <View
         android:id="@+id/garis_atas_price_bar"
         android:layout_width="match_parent"

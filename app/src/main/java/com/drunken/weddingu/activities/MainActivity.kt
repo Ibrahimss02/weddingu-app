@@ -54,6 +54,16 @@ class MainActivity : AppCompatActivity() {
             onPause()
         }
 
+        binding.ivCateringCategories.setOnClickListener {
+            startActivity(Intent(this, CateringActivity::class.java))
+            onPause()
+        }
+
+        binding.cvCateringCategories.setOnClickListener {
+            startActivity(Intent(this, CateringActivity::class.java))
+            onPause()
+        }
+
         val listImage1 = arrayListOf(R.drawable.wedding_venue_example, R.drawable.ic_customer_service, R.drawable.wedding_photographer)
         val adapter = ViewPagerAdapter(this, listImage1)
         binding.viewPagerHomepageBanner.adapter = adapter

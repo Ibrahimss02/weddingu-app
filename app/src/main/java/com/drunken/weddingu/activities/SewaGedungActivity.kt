@@ -5,17 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.Menu
-import android.view.MenuItem
-import android.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.drunken.weddingu.R
-import com.drunken.weddingu.adapters.SewaGedungAdapters
+import com.drunken.weddingu.adapters.SewaGedungAdapter
 import com.drunken.weddingu.databinding.ActivitySewaGedungBinding
 import com.drunken.weddingu.firebase.Firestore
 import com.drunken.weddingu.models.GedungModel
 import java.util.*
-import java.util.Locale.filter
 import kotlin.collections.ArrayList
 
 class SewaGedungActivity : AppCompatActivity() {
@@ -46,14 +42,14 @@ class SewaGedungActivity : AppCompatActivity() {
         binding.rvDataGedung.layoutManager = LinearLayoutManager(this)
         binding.rvDataGedung.setHasFixedSize(true)
 
-        val myAdapters = SewaGedungAdapters(this, gedung)
+        val myAdapters = SewaGedungAdapter(this, gedung)
         binding.rvDataGedung.adapter = myAdapters
 
         var jmlhGedung = "%,d".format(myAdapters.itemCount)
         val jmlhGedungText = "$jmlhGedung Gedung in Malang, Jawa Timur"
         binding.tvJmlhGedung.text = jmlhGedungText
 
-        myAdapters.setOnClickListener(object : SewaGedungAdapters.OnClickListener{
+        myAdapters.setOnClickListener(object : SewaGedungAdapter.OnClickListener{
             override fun onClick(position: Int, model: GedungModel) {
                 val intent = Intent(this@SewaGedungActivity, DetailGedung::class.java)
                 intent.putExtra("Gedung Model", model)

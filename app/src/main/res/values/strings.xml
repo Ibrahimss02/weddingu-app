@@ -69,5 +69,7 @@
     <string name="search_catering">Cari Katering</string>
     <string name="alamat_katering">Alamat Katering</string>
     <string name="gambar_catering">Gambar Catering</string>
-
+    <string name="info_pembayaran">Info Pembayaran</string>
+    <string name="no_rekening">No Rekening</string>
+    <string name="bank_mandiri">Bank Mandiri</string>
 </resources>

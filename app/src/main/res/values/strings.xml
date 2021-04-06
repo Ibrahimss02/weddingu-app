@@ -82,5 +82,9 @@
     <string name="transfer_alamat">Alamat Tagihan</string>
     <string name="transfer_kode_pos">Kode Pos</string>
     <string name="kirim">Kirimkan</string>
+    <string name="pembayaran">Pembayaran Berhasil</string>
+    <string name="pembayaran_cek_1">Cek Pesanan Saya untuk info</string>
+    <string name="pembayaran_cek_2">lebih lanjut</string>
+    <string name="pembayaran_proses">Memproses Pembayaran</string>
 
 </resources>

@@ -183,6 +183,7 @@
                 android:id="@+id/exapandable_list_view_transfer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#2D8E8D8D"
                 android:dividerHeight="0.5dp" />
 
         </LinearLayout>

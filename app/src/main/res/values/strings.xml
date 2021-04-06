@@ -72,4 +72,15 @@
     <string name="info_pembayaran">Info Pembayaran</string>
     <string name="no_rekening">No Rekening</string>
     <string name="bank_mandiri">Bank Mandiri</string>
+    <string name="kartu_kredit">Kartu Kredit / Debit Online</string>
+    <string name="transfer_nama">Nama Tertera di Kartu</string>
+    <string name="transfer_nomor">No Kartu</string>
+    <string name="transfer_tipe">Tipe Kartu</string>
+    <string name="ketik">Ketik disini...</string>
+    <string name="transfer_tangal">Tanggal Akhir Masa Berlaku</string>
+    <string name="transfer_kode">Kode CVV</string>
+    <string name="transfer_alamat">Alamat Tagihan</string>
+    <string name="transfer_kode_pos">Kode Pos</string>
+    <string name="kirim">Kirimkan</string>
+
 </resources>

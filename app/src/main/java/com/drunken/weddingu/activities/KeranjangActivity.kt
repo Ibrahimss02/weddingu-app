@@ -26,8 +26,6 @@ class KeranjangActivity : BaseActivity() {
         setContentView(binding.root)
         Firestore().getUserData(this)
 
-
-
         binding.llCartPertama.setOnClickListener {
             val intent = Intent(this, DetailGedung::class.java)
             intent.putExtra("Gedung Model", gedungModel)
@@ -38,12 +36,7 @@ class KeranjangActivity : BaseActivity() {
         binding.keranjangBackBtn.setOnClickListener { onBackPressed() }
 
         binding.btnTrashItemPertama.setOnClickListener {
-            firestore.collection("Users").document(Firestore().getCurrentUserID()).update("gedungModel", 0).addOnSuccessListener {
-                finish()
-                overridePendingTransition(0, 0)
-                startActivity(intent)
-                overridePendingTransition(0, 0)
-            }
+            Firestore().clearCart(this)
         }
 
         binding.btnCheckout.setOnClickListener {
@@ -82,6 +75,13 @@ class KeranjangActivity : BaseActivity() {
     fun displayTotalHarga(){
         val hargaTotalFormatted = "%,d".format(totalHarga)
         binding.tvTotalHargaKeranjang.text = "Rp $hargaTotalFormatted"
+    }
+
+    fun refreshActivity(){
+        finish()
+        overridePendingTransition(0, 0)
+        startActivity(intent)
+        overridePendingTransition(0, 0)
     }
 
 }

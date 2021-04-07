@@ -10,30 +10,39 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WeddingU">
         <activity
-            android:name=".activities.MetodePembayaranActivity"
+            android:name=".activities.TransaksiSuksesActivity"
             android:screenOrientation="portrait"
             android:theme="@style/No_Action_Bar">
         </activity>
+        <activity
+            android:name=".activities.LoadingProsesPembayaranActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/No_Action_Bar">
+        </activity>
+        <activity
+            android:name=".activities.TransferBankEnd"
+            android:screenOrientation="portrait"
+            android:theme="@style/No_Action_Bar" />
+        <activity
+            android:name=".activities.MetodePembayaranActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/No_Action_Bar" />
         <activity
             android:name=".activities.DetailCatering"
             android:screenOrientation="portrait"
-            android:theme="@style/No_Action_Bar">
-        </activity>
+            android:theme="@style/No_Action_Bar" />
         <activity
             android:name=".activities.CateringActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/No_Action_Bar">
-        </activity>
+            android:theme="@style/No_Action_Bar" />
         <activity
             android:name=".activities.CheckoutActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/No_Action_Bar">
-        </activity>
+            android:theme="@style/No_Action_Bar" />
         <activity
             android:name=".activities.KeranjangActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/No_Action_Bar">
-        </activity>
+            android:theme="@style/No_Action_Bar" />
         <activity android:name=".activities.BaseActivity" />
         <activity
             android:name=".activities.ProfileActivity"

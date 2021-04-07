@@ -78,6 +78,29 @@ class Firestore {
         }
     }
 
+    fun clearCart(activity: Activity){
+        firestore.collection("Users").document(getCurrentUserID()).update("gedungModel", 0)
+        firestore.collection("Users").document(getCurrentUserID()).update("tanggal", null).addOnSuccessListener {
+            when(activity){
+                is LoadingProsesPembayaranActivity -> {
+                    activity.finishActivity("Sukses")
+                }
+                is KeranjangActivity -> {
+                    activity.refreshActivity()
+                }
+            }
+        }.addOnFailureListener {
+            when(activity){
+                is LoadingProsesPembayaranActivity -> {
+                    activity.finishActivity("Gagal")
+                }
+                is KeranjangActivity -> {
+                    activity.showErrorSnackBar("Something Wrong. Try Again")
+                }
+            }
+        }
+    }
+
     fun setTanggal(date : String){
         firestore.collection("Users").document(getCurrentUserID()).update("tanggal", date)
     }

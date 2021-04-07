@@ -83,8 +83,14 @@
     <string name="transfer_kode_pos">Kode Pos</string>
     <string name="kirim">Kirimkan</string>
     <string name="pembayaran">Pembayaran Berhasil</string>
-    <string name="pembayaran_cek_1">Cek Pesanan Saya untuk info</string>
+    <string name="pembayaran_cek_1">Cek Pesanan Saya untuk info lebih lanjut</string>
     <string name="pembayaran_cek_2">lebih lanjut</string>
     <string name="pembayaran_proses">Memproses Pembayaran</string>
+    <string name="pilih_metode_pembayaran">Pilih Metode Pembayaran</string>
+    <string name="petunjuk_transfer_atm">Petunjuk Transfer ATM</string>
+    <string name="petunjuk_transfer_mobile_banking">Petunjuk Transfer Mobile Banking</string>
+    <string name="first_text_tf_bank_ATM">Pilih <b>m-Transfer > </b>Mandiri virtual account</string>
+    <string name="second_text_tf_bank_ATM">Masukkan nomor virtual account <b>111314346768878</b> dan pilih <b>Send</b></string>
+    <string name="third_text_tf_bank_ATM">Periksa informasi yang tertera di layar. Pastikan merchant adalah <b>Wedding - U!</b>, Total tagihan dan username sudah benar. Jika benar pilih <b>OK</b></string>
 
 </resources>

@@ -19,6 +19,7 @@ import java.util.jar.Manifest
 class DetailGedung : BaseActivity() {
 
     private lateinit var binding : ActivityDetailGedungBinding
+    private var date : String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +27,8 @@ class DetailGedung : BaseActivity() {
         setContentView(binding.root)
 
         var gedungDetailModel : GedungModel? = null
+
+        binding.calendarDetailGedung.minDate = Calendar.getInstance().timeInMillis
 
         if(intent.hasExtra("Gedung Model")){
             gedungDetailModel = intent.getSerializableExtra("Gedung Model") as GedungModel
@@ -43,7 +46,7 @@ class DetailGedung : BaseActivity() {
             val kapasitasGedung = "%,d".format(gedungDetailModel.kapasitas)
             binding.kapasitasGedungDetail.text = kapasitasGedung
             val hargaGedung = "%,d".format(gedungDetailModel.harga)
-            binding.tarifGedungDetail.text = "Rp $hargaGedung/night"
+            binding.tarifGedungDetail.text = "Rp $hargaGedung/malam"
         }
 
         binding.exitBtn.setOnClickListener {
@@ -61,13 +64,16 @@ class DetailGedung : BaseActivity() {
         }
 
         binding.addToCartBtn.setOnClickListener {
-            Firestore().addToCartGedung(this, gedungDetailModel!!)
+            if(date == null){
+                Toast.makeText(this, "Tanggal belum dipilih", Toast.LENGTH_SHORT).show()
+            } else {
+                Firestore().addToCartGedung(this, gedungDetailModel!!)
+            }
         }
 
-
         binding.calendarDetailGedung.setOnDateChangeListener { _, year, month, dayOfMonth ->
-            val date = "$dayOfMonth/${month + 1}/$year"
-            Firestore().setTanggal(date)
+            date = "$dayOfMonth/${month + 1}/$year"
+            Firestore().setTanggal(date!!)
         }
     }
 }

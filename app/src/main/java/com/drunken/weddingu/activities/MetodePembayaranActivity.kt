@@ -49,11 +49,45 @@ class MetodePembayaranActivity : BaseActivity() {
         binding.exapandableListViewMetodePembayaran.setAdapter(adapter)
 
         binding.exapandableListViewMetodePembayaran.setOnChildClickListener { parent, v, groupPosition, childPosition, id ->
-            // Bank Mandiri Clicked
-            if(childPosition == 1){
-                Toast.makeText(this, "Bank Mandiri", Toast.LENGTH_SHORT).show()
+            when(groupPosition){
+                // Transfer Bank Method Group
+                0 -> {
+                    when(childPosition){
+                        0 -> {
+                            intent.putExtra("Hasil", "Transfer Bank BCA")
+                            intent.putExtra("Metode", "Bank BCA")
+                            intent.putExtra("Gambar Bank", R.drawable.ic_bank_bca)
+                            setResult(RESULT_OK, intent)
+                            finish()
+                        }
+                        1 -> {
+                            intent.putExtra("Hasil", "Transfer Bank Mandiri")
+                            intent.putExtra("Metode", "Bank Mandiri")
+                            intent.putExtra("Gambar Bank", R.drawable.bank_mandiri)
+                            setResult(RESULT_OK, intent)
+                            finish()
+                        }
+                        2 -> {
+                            intent.putExtra("Hasil", "Transfer Bank BRI")
+                            intent.putExtra("Metode", "Bank BRI")
+                            intent.putExtra("Gambar Bank", R.drawable.bank_bri)
+                            setResult(RESULT_OK, intent)
+                            finish()
+                        }
+                        3 -> {
+                            intent.putExtra("Hasil", "Transfer Bank BNI")
+                            intent.putExtra("Metode", "Bank BNI")
+                            intent.putExtra("Gambar Bank", R.drawable.bank_bni)
+                            setResult(RESULT_OK, intent)
+                            finish()
+                        }
+                    }
+                }
             }
+
             false
         }
+
+        binding.btnMetodeBayarBack.setOnClickListener { onBackPressed() }
     }
 }

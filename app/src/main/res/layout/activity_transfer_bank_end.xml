@@ -37,7 +37,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/sv_keranjang_bg"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_ok"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ll_home_page"
@@ -186,7 +186,8 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -194,6 +195,7 @@
                 android:orientation="vertical">
 
                 <RelativeLayout
+                    android:id="@+id/bar_petunjuk_tf_atm"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="26dp"
@@ -209,6 +211,7 @@
                         android:textStyle="bold" />
 
                     <ImageView
+                        android:id="@+id/panah_bar_petunjuk_tf_atm"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
@@ -218,7 +221,133 @@
 
                 </RelativeLayout>
 
+                <LinearLayout
+                    android:id="@+id/tips_tf_atm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#B3E0D8D8"
+                    android:visibility="gone"
+                    tools:visibility="gone">
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="14dp"
+                        android:paddingTop="14dp"
+                        android:paddingEnd="14dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_number_one"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/first_text_tips_tf_atm"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="14dp"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="14dp"
+                        android:paddingTop="14dp"
+                        android:paddingEnd="14dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_number_two"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/second_text_tips_tf_atm"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="14dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="14dp"
+                        android:paddingTop="14dp"
+                        android:paddingEnd="14dp"
+                        android:paddingBottom="14dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_number_three"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/third_text_tips_tf_atm"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="14dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:paddingBottom="14dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_number_four"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fourth_text_tips_tf_atm"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="14dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:paddingBottom="14dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_number_five"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fifth_text_tips_tf_atm"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="14dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
 
                 <RelativeLayout
                     android:id="@+id/bar_petunjuk_tf_mbanking"
@@ -272,7 +401,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/first_text_tf_bank_ATM"
+                            android:text="@string/first_text_tf_bank_mbanking"
                             android:textColor="@color/black"
                             android:layout_marginStart="14dp"/>
 
@@ -296,7 +425,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/second_text_tf_bank_ATM"
+                            android:text="@string/second_text_tf_bank_mbanking"
                             android:textColor="@color/black"
                             android:layout_marginStart="14dp" />
 
@@ -320,39 +449,36 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/third_text_tf_bank_ATM"
+                            android:text="@string/third_text_tf_bank_mbanking"
                             android:textColor="@color/black"
                             android:layout_marginStart="14dp"/>
 
                     </LinearLayout>
 
+
+
                 </LinearLayout>
+
+
 
             </LinearLayout>
 
         </ScrollView>
 
-
     </LinearLayout>
 
-    <LinearLayout
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_ok"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:padding="10dp">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_ok"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="OK"
-            android:layout_marginStart="110dp"
-            android:layout_marginEnd="110dp"
-            app:cornerRadius="10dp"
-            android:textAllCaps="false"
-            android:textSize="14sp"
-            android:layout_gravity="center_vertical"/>
-
-    </LinearLayout>
+        android:layout_marginBottom="15dp"
+        android:text="OK"
+        android:layout_marginStart="110dp"
+        android:layout_marginEnd="110dp"
+        app:cornerRadius="10dp"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:layout_gravity="center_vertical"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

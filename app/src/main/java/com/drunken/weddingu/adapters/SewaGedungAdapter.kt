@@ -41,7 +41,7 @@ open class SewaGedungAdapter (private val context : Context, private var list : 
             binding.rvAlamatGedung.text = gedungModel.alamat
             binding.rvRatingGedung.text = gedungModel.rating.toString()
             val hargaGedung = "%,d".format(gedungModel.harga)
-            binding.rvTarifGedung.text = "Rp $hargaGedung/night"
+            binding.rvTarifGedung.text = "Rp $hargaGedung/malam"
 //            binding.rvJarakGedung.text = ??
 
         }

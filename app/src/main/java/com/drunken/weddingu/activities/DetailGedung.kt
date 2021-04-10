@@ -46,7 +46,7 @@ class DetailGedung : BaseActivity() {
             val kapasitasGedung = "%,d".format(gedungDetailModel.kapasitas)
             binding.kapasitasGedungDetail.text = kapasitasGedung
             val hargaGedung = "%,d".format(gedungDetailModel.harga)
-            binding.tarifGedungDetail.text = "Rp $hargaGedung/night"
+            binding.tarifGedungDetail.text = "Rp $hargaGedung/malam"
         }
 
         binding.exitBtn.setOnClickListener {

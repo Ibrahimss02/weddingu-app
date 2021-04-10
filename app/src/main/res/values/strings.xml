@@ -89,8 +89,13 @@
     <string name="pilih_metode_pembayaran">Pilih Metode Pembayaran</string>
     <string name="petunjuk_transfer_atm">Petunjuk Transfer ATM</string>
     <string name="petunjuk_transfer_mobile_banking">Petunjuk Transfer Mobile Banking</string>
-    <string name="first_text_tf_bank_ATM">Pilih <b>m-Transfer > </b>Mandiri virtual account</string>
-    <string name="second_text_tf_bank_ATM">Masukkan nomor virtual account <b>111314346768878</b> dan pilih <b>Send</b></string>
-    <string name="third_text_tf_bank_ATM">Periksa informasi yang tertera di layar. Pastikan merchant adalah <b>Wedding - U!</b>, Total tagihan dan username sudah benar. Jika benar pilih <b>OK</b></string>
+    <string name="first_text_tf_bank_mbanking">Pilih <b>m-Transfer > </b>Mandiri virtual account</string>
+    <string name="second_text_tf_bank_mbanking">Masukkan nomor virtual account <b>111314346768878</b> dan pilih <b>Send</b></string>
+    <string name="third_text_tf_bank_mbanking">Periksa informasi yang tertera di layar. Pastikan merchant adalah <b>Wedding - U!</b>, Total tagihan dan username sudah benar. Jika benar pilih <b>OK</b></string>
+    <string name="first_text_tips_tf_atm">Pilih <b>Bayar/Beli</b></string>
+    <string name="second_text_tips_tf_atm">Pilih Menu <b>Transfer</b></string>
+    <string name="third_text_tips_tf_atm">Masukkan <b>kode bank</b> diikuti dengan <b>Rek. Tujuan</b></string>
+    <string name="fourth_text_tips_tf_atm">Masukkan Nominal sesuai yang ada di <b>laman Info Pembayaran</b></string>
+    <string name="fifth_text_tips_tf_atm">Pastikan informasi yang tertera di layar. Jika sudah benar pilih <b>OK</b></string>
 
 </resources>

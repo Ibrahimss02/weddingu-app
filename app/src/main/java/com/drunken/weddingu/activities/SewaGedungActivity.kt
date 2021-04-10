@@ -54,7 +54,6 @@ class SewaGedungActivity : AppCompatActivity() {
                 val intent = Intent(this@SewaGedungActivity, DetailGedung::class.java)
                 intent.putExtra("Gedung Model", model)
                 startActivity(intent)
-
             }
         })
 

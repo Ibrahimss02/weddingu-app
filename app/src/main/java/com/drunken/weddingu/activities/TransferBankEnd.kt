@@ -37,6 +37,16 @@ class TransferBankEnd : AppCompatActivity() {
             }
         }
 
+        binding.barPetunjukTfAtm.setOnClickListener {
+            if (binding.tipsTfAtm.visibility == View.GONE){
+                binding.panahBarPetunjukTfAtm.setImageResource(R.drawable.ic_arrow_up)
+                binding.tipsTfAtm.visibility = View.VISIBLE
+            } else {
+                binding.panahBarPetunjukTfAtm.setImageResource(R.drawable.ic_arrow_down)
+                binding.tipsTfAtm.visibility = View.GONE
+            }
+        }
+
         binding.btnOk.setOnClickListener {
             startActivity(Intent(this, LoadingProsesPembayaranActivity::class.java))
             finish()

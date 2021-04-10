@@ -86,5 +86,8 @@
     <string name="pembayaran_cek_1">Cek Pesanan Saya untuk info</string>
     <string name="pembayaran_cek_2">lebih lanjut</string>
     <string name="pembayaran_proses">Memproses Pembayaran</string>
+    <string name="nama_photographer">Nama Fotografer</string>
+    <string name="keterangan_photographer">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. </string>
+    <string name="harga_photographer"><b>Rp 3.500.000.000/</b>paket</string>
 
 </resources>

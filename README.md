@@ -1,2 +1,2 @@
 # WeddingU
-Aplikasi ini diperuntukan sebagai project dalam tahap oprec Raion 2021 yaitu internship
+Aplikasi penghubung antara para kustomer yang ingin melaksanakan pernikahan dengan para penyedia jasa i.e. Penyedia Gedung, Katering, Dokumentasi, dan Event Organizer.
